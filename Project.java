@@ -3,6 +3,7 @@ import java.util.*;
 class Project{
     String name, designation, password;
     float dues, paidDues, balance;
+    //Empty constructor
     public Project(){}
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
@@ -10,7 +11,7 @@ class Project{
         Project accountant = new Project();
         Project student = new Project();
 
-
+        //Admin information given through the main
         admin.name = "Amartya Mukherjee";
         admin.designation = "admin";
         admin.password = "amartya811";
@@ -19,29 +20,34 @@ class Project{
         //System.out.println("Enter user designation: ");
         //String user = sc.nextLine();
         String password;
+        //The process begins by entering the designation of user
         do{
             System.out.println("Enter user designation: ");
             String user = sc.nextLine();
             while(user.toLowerCase().equals("admin") || user.toLowerCase().equals("accountant") || user.toLowerCase().equals("student")){
+                //if designation == admin
                 if(user.toLowerCase().equals("admin")){
                     //while(a < 3){
                         System.out.println("Enter password for admin: ");
                         password = sc.nextLine();
-                        //if(password.equals(admin.password)){
+                        //if(password.equals(admin.password)){IF PASSWORD == ADMIN PASSWORD
                             while(password.equals(admin.password)){
                                 System.out.println("What operation would you like to perform on Accountant?\n1. Add\n2. View\n3. Edit\n4. Delete\n5. Exit");
                                 input = sc.nextLine();
+                                //operation == add accountant
                                 if(input.toLowerCase().equals("add")){
                                     System.out.println("Enter accountant name: ");
                                     accountant.name = sc.nextLine();
                                     accountant.designation = "accountant";
                                     accountant.password = "password";
                                 }
+                                //operation == view accountant details
                                 else if(input.toLowerCase().equals("view")){
                                     System.out.println("Accountant Name: " + accountant.name);
                                     System.out.println("Designation: " + accountant.designation);
                                     System.out.println("Accountant Password: " + accountant.password);
                                 }
+                                //operation == edit accountant details
                                 else if(input.toLowerCase().equals("edit")){
                                     System.out.println("Enter edited accountant name: ");
                                     accountant.name = sc.nextLine();
@@ -49,6 +55,7 @@ class Project{
                                     System.out.println("Enter edited accountant password: ");
                                     accountant.password = sc.nextLine();
                                 }
+                                //operation == delete accountant
                                 else if(input.toLowerCase().equals("delete")){
                                     accountant = null;
                                 }
