@@ -20,10 +20,10 @@ public class q7bank extends q7init{
         q7bank bank3 = new q7bank("Bank of Jupiter", 18.7, 5109);
         q7bank bank4 = new q7bank("Bank of Saturn", 13.6, 6109);
         q7bank bank5 = new q7bank("Bank of Venus", 10.3, 0);
-        bank1.show_roi(bank1.bank_id);
-        bank2.show_roi(bank2.bank_id);
-        bank3.show_roi(bank3.bank_id);
-        bank4.show_roi(bank4.bank_id);
+        bank1.show_roi(bank1.bank_id+"Bank of Earth"+"   "+10.3);
+        bank2.show_roi(bank2.bank_id+"Bank of Mars"+"   "+22.5);
+        bank3.show_roi(bank3.bank_id+"Bank of Jupiter"+"   "+18.7);
+        bank4.show_roi(bank4.bank_id+"Bank of Saturn"+"   "+13.6);
         bank5.show_roi(bank5.bank_id);
         bank5.chng_roi(20);
     }
